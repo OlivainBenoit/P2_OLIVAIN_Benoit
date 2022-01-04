@@ -10,7 +10,7 @@
 
 /* Header */
 
-.euro{
+.euro {
   font-weight: bold;
 }
 
@@ -70,7 +70,10 @@ header li a::after {
 }
 /* En tête Body */
 
-  #en_tete_body, #filtres, .information, .bloc_1{
+#en_tete_body,
+#filtres,
+.information,
+.bloc_1 {
   padding-left: 60px;
 }
 
@@ -100,7 +103,7 @@ h1 {
   align-items: center;
   width: 50px;
   background: #f2f2f2;
-  border-radius: 0.75em 0 0 0.75em;
+  border-radius: 15px 0 0 15px;
   font-size: 17px;
 }
 
@@ -121,7 +124,7 @@ h1 {
 
 .bouton {
   background-color: #0065fc;
-  border-radius: 0 1em 1em 0;
+  border-radius: 0 15px 15px 0;
   border-style: none;
   color: white;
   width: 170px;
@@ -148,7 +151,7 @@ h1 {
   padding: 15px 20px 15px 30px;
   border: 3px #f2f2f2 solid;
   border-left: none;
-  border-radius: 0 2em 2em 0;
+  border-radius: 0 30px 30px 0;
 }
 
 #filtres a:hover,
@@ -227,13 +230,15 @@ footer li a:hover {
 }
 
 .bloc_hebergement {
-  justify-content: space-around;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
   margin: 0 auto;
 }
 
 .article_hebergement {
   margin: 1.5% 0;
-  border-radius: 1.5em;
+  border-radius: 20px;
   background: white;
   min-width: 260px;
   max-width: 330px;
@@ -244,7 +249,7 @@ footer li a:hover {
 #hebergements_marseille,
 aside {
   background: #f2f2f2;
-  border-radius: 1.5em;
+  border-radius: 20px;
 }
 
 section h2 {
@@ -264,9 +269,9 @@ h3 {
 .images_hebergements {
   object-fit: cover;
   height: 140px;
-  width: 96.8%;
-  border-radius: 1.5em 1.5em 0 0;
-  margin: 5px;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  padding: 5px;
 }
 
 .afficher_plus {
@@ -310,22 +315,18 @@ section .icones_evaluation {
 }
 
 article {
-  border-radius: 1.5em;
+  border-radius: 20px;
   box-shadow: 1px 1px 10px rgb(212, 212, 212);
   background: white;
 }
 
-aside p{
-  margin-bottom: 45px;
-}
-
 aside img {
   object-fit: cover;
-  height: 170px;
+  height: 100%;
   width: 150px;
   flex: 1;
-  border-radius: 1.25em 0 0 1.25em;
-  margin: 5px;
+  border-radius: 20px 0 0 20px;
+  padding: 5px;
 }
 
 .bloc_aside {
@@ -337,6 +338,11 @@ aside img {
   min-width: 200px;
 }
 
+.bloc_aside_top,
+.icones_evaluation {
+  align-content: space-between;
+}
+
 aside {
   flex: 1 0 30%;
   height: auto;
@@ -345,6 +351,7 @@ aside {
 
 .div_aside {
   flex-direction: column;
+  padding: 20px;
 }
 
 aside h2 {
@@ -390,7 +397,7 @@ aside h2 {
 }
 
 .bloc_activites img {
-  border-radius: 1.5em 1.5em 0 0;
+  border-radius: 20px 20px 0 0;
   object-fit: cover;
   width: 100%;
   height: 500px;
@@ -443,7 +450,7 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding:0 20% 30px 80px;
+  padding: 0 20% 30px 80px;
   margin-top: 50px;
   background: #f2f2f2;
 }
@@ -480,6 +487,10 @@ h4 {
     padding-left: 30px;
   }
 
+  .bloc_1 {
+    padding-left: 0;
+  }
+
   #filtres {
     flex-wrap: wrap;
   }
@@ -505,9 +516,14 @@ h4 {
     height: auto;
   }
 
-  aside article {
-    width: 440px;
-    margin: 10px 20px;
+  .div_aside {
+    row-gap: 40px;
+  }
+
+  .article_aside {
+    width: 80%;
+    max-width: none;
+    margin: auto;
   }
 
   #hebergements_marseille {
@@ -515,12 +531,15 @@ h4 {
     background: white;
   }
 
-  .bloc_activite_13_46{
-    justify-content: center;
+  .activite_14,
+  .activite_2,
+  .activite_3,
+  .activite_5,
+  .activite_6 {
+    margin: 20px;
   }
 
-
-  footer{
+  footer {
     flex-direction: column;
   }
 }
@@ -540,7 +559,7 @@ h4 {
     justify-content: center;
   }
 
-  nav{
+  nav {
     display: flex;
   }
 
@@ -551,11 +570,17 @@ h4 {
     margin: 0;
   }
 
+  header li {
+    flex: 1;
+  }
+
   .lien_navigation {
     width: auto;
   }
 
   header li a {
+    display: block;
+    text-align: center;
     border-bottom: 4px #f2f2f2 solid;
     border-right: none;
     border-left: none;
@@ -569,21 +594,21 @@ h4 {
     border-top: 3px transparent solid;
   }
 
-  #logo img{
+  #logo img {
     margin: 20px 0 0 0;
   }
 
   /* Media queries en tete body */
 
-  h3{
+  h3 {
     font-size: 16px;
   }
 
-  h2{
+  h2 {
     font-size: 21px;
   }
 
-  h1{
+  h1 {
     font-size: 23px;
     margin-right: 30px;
   }
@@ -592,19 +617,22 @@ h4 {
     font-size: 13px;
   }
 
-  #en_tete_body p{
+  #en_tete_body p {
     font-size: 17px;
   }
 
-  .texte_information{
+  .texte_information {
     font-size: 15px;
   }
 
-  #en_tete_body, #filtres, .information, .bloc_1 {
+  #en_tete_body,
+  #filtres,
+  .information,
+  .bloc_1 {
     padding-left: 0;
   }
 
-  #filtres{
+  #filtres {
     font-size: 20px;
   }
 
@@ -617,10 +645,10 @@ h4 {
   .bouton {
     content: none;
     width: 50px;
-    border-radius: 0.75em;
+    border-radius: 15px;
   }
 
-  #barre_de_recherche{
+  #barre_de_recherche {
     height: 50px;
     margin-top: 30px;
   }
@@ -634,7 +662,7 @@ h4 {
     display: none;
   }
 
-  .recherche{
+  .recherche {
     width: 250px;
     font-size: 18px;
     margin-right: -20px;
@@ -651,25 +679,25 @@ h4 {
   }
 
   .bloc_filtres {
-    margin:5px 5px;
+    margin: 5px 5px;
     height: auto;
   }
 
-  #filtres p{
+  #filtres p {
     font-size: 20px;
     margin: 10px;
   }
 
-  .texte_filtres{
+  .texte_filtres {
     font-size: 15px;
   }
 
-  .icones_filtres{
+  .icones_filtres {
     width: 53px;
     height: 53px;
   }
 
-  .icone_information{
+  .icone_information {
     font-size: 12px;
     width: 30px;
     height: 30px;
@@ -678,28 +706,26 @@ h4 {
 
   /* Media queries aside */
 
-  aside p{
-    margin: 0 0 40px 0;
-  }
-
-  aside h3{
+  aside h3 {
     margin: 15px 0 10px 0;
   }
 
-  .icones_evaluation{
+  .icones_evaluation {
     font-size: 12px;
   }
 
-  .icone_aside{
+  .icone_aside {
     font-size: 20px;
+    margin-top: 20px;
   }
 
-  .titre_aside{
+  .titre_aside {
     margin-left: 20px;
   }
 
-  .div_aside{
-    width: auto;
+  .div_aside {
+    width: 80%;
+    margin: auto;
   }
 
   .bloc_1 {
@@ -714,31 +740,32 @@ h4 {
     height: auto;
   }
 
-  .article_aside{
-    width: auto;
-    max-width: 330px;
-    margin: 5px auto;
+  .article_aside {
+    max-width: none;
+    width: 100%;
+    margin: 15px auto;
     height: 140px;
   }
-  
-  aside img{
-    height: 130px;
+
+  aside img {
+    height: 100%;
+
     width: 120px;
   }
 
-  .bloc_activites{
+  .bloc_activites {
     justify-content: center;
   }
 
-  .bloc_activites_general{
+  .bloc_activites_general {
     margin-right: 0;
   }
 
-  .bloc_activite_13_46{
+  .bloc_activite_13_46 {
     justify-content: center;
   }
 
-  #activites_marseille h2{
+  #activites_marseille h2 {
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -750,17 +777,18 @@ h4 {
   }
 
   .article_hebergement {
-    width: 340px;
+    max-width: none;
     height: 200px;
+    flex: 1 0 100%;
   }
 
   .images_hebergements {
-    width: 320px;
     height: 110px;
+    width: 100%;
   }
 
   section p,
-  #hebergements_marseille  h3,
+  #hebergements_marseille h3,
   section .icones_evaluation {
     margin: 0 0 8px 15px;
   }
@@ -771,18 +799,19 @@ h4 {
     font-size: 18px;
   }
 
-  .bloc_hebergement{
-    margin: 0;
+  .bloc_hebergement {
+    margin: auto;
+    width: 80%;
   }
-
 
   /* Media queries Activites */
 
-  .bloc_activites, #hebergements_marseille {
+  .bloc_activites,
+  #hebergements_marseille {
     justify-content: center;
   }
 
-  .bloc_activite_13_46{
+  .bloc_activite_13_46 {
     flex-wrap: wrap;
   }
 
@@ -796,7 +825,7 @@ h4 {
   .activite_3,
   .activite_5,
   .activite_6 {
-    width: 340px;
+    width: 100%;
     height: 180px;
   }
 
@@ -805,7 +834,7 @@ h4 {
   .activite_3 img,
   .activite_5 img,
   .activite_6 img {
-    width: 340px;
+    width: 100%;
     height: 130px;
   }
 
@@ -814,28 +843,37 @@ h4 {
     font-size: 15px;
   }
 
+  .bloc_activites_general {
+    width: 70%;
+    margin: auto;
+  }
+
+  .bloc_activites {
+    max-width: none;
+  }
+
   /* media queries footer */
 
   footer {
     flex-direction: column;
     width: auto;
-    padding:20px 0 50px 30px;
+    padding: 20px 0 50px 30px;
     margin-top: 20px;
   }
 
-  footer li{
+  footer li {
     font-size: 15px;
   }
 
-  h4{
+  h4 {
     font-size: 18px;
   }
 
-  .colonne_footer{
+  .colonne_footer {
     margin-top: 0;
   }
 
-  footer ul{
+  footer ul {
     margin-bottom: 0;
   }
 }
