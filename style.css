@@ -177,10 +177,12 @@ footer li a:hover {
   align-items: center;
   height: 70px;
   margin-left: 15px;
+  margin-bottom: 10px;
 }
 
 .bloc_4_filtres {
   display: flex;
+  flex-wrap: wrap;
   margin-left: 20px;
 }
 
@@ -330,6 +332,7 @@ aside img {
 }
 
 .bloc_aside {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-left: 4%;
@@ -346,6 +349,7 @@ aside img {
 aside {
   flex: 1 0 30%;
   height: auto;
+  min-width: 420px;
   margin: 0 3% 0 3%;
 }
 
@@ -360,6 +364,11 @@ aside h2 {
 
 .etoile_grise {
   color: #f2f2f2;
+}
+
+.icones_aside {
+  position: absolute;
+  bottom: 15px;
 }
 
 /* Activites à Marseille */
@@ -377,6 +386,7 @@ aside h2 {
   display: flex;
   flex: 1 0 48%;
   justify-content: space-around;
+  column-gap: 20px;
 }
 
 .bloc_activites {
@@ -394,6 +404,7 @@ aside h2 {
   display: flex;
   flex-wrap: wrap;
   margin: 0 15px;
+  column-gap: 20px;
 }
 
 .bloc_activites img {
@@ -473,6 +484,54 @@ footer li {
 h4 {
   font-size: 25px;
 }
+/* media queries deskop -1250px */
+
+@media screen and (max-width: 1250px) {
+  aside {
+    margin-top: 30px;
+    margin-left: 0;
+    width: 95%;
+    padding-bottom: 50px;
+  }
+
+  #hebergements_marseille {
+    width: 95%;
+  }
+
+  .bloc_1 {
+    flex-direction: column;
+  }
+
+  .images_aside {
+    flex: 1 0 40%;
+  }
+
+  .bloc_aside {
+    flex: 2 0 60%;
+  }
+
+  aside img {
+    width: 100%;
+  }
+
+  .article_aside {
+    width: 80%;
+    max-width: none;
+    margin: auto;
+  }
+
+  .div_aside {
+    row-gap: 40px;
+  }
+
+  #filtres {
+    flex-wrap: wrap;
+  }
+
+  .bloc_4_filtres {
+    margin-left: 0;
+  }
+}
 
 /* Media queries Tablettes */
 
@@ -485,10 +544,6 @@ h4 {
   #filtres,
   .information {
     padding-left: 30px;
-  }
-
-  .bloc_1 {
-    padding-left: 0;
   }
 
   #filtres {
@@ -507,6 +562,7 @@ h4 {
   .bloc_1 {
     display: flex;
     flex-direction: column;
+    padding-left: 0;
   }
 
   aside {
@@ -514,10 +570,23 @@ h4 {
     padding-bottom: 40px;
     border-radius: 0;
     height: auto;
+    width: 100%;
   }
 
   .div_aside {
     row-gap: 40px;
+  }
+
+  .images_aside {
+    flex: 1 0 40%;
+  }
+
+  .bloc_aside {
+    flex: 2 0 60%;
+  }
+
+  aside img {
+    width: 100%;
   }
 
   .article_aside {
@@ -728,6 +797,14 @@ h4 {
     margin: auto;
   }
 
+  .images_aside {
+    flex: 1 0 40%;
+  }
+
+  .bloc_aside {
+    flex: 2 0 60%;
+  }
+
   .bloc_1 {
     display: flex;
     flex-direction: column-reverse;
@@ -749,8 +826,7 @@ h4 {
 
   aside img {
     height: 100%;
-
-    width: 120px;
+    width: 100%;
   }
 
   .bloc_activites {
